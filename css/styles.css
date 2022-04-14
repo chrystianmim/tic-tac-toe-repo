@@ -16,36 +16,64 @@ body {
     align-items: center;
 }
 
-.board {
-    width: 600px;
-    height: 600px;
-
+.boardwrap {
+    margin: 20px 0px 20px 0px;
 }
 
-.line-top,
+.board {
+    line-height: 0px;
+}
+
+/* .line-top,
 .line-middle,
 .line-bottom {
     display: inline-block;
-}
+} */
 
 .square {
     width: 180px;
     height: 180px;
-    background-color: #FFFFFF80;
-    display: inline-block;
-    border-width: 0;
-    margin: 0;
-    padding: 0;
-    outline: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    outline: none !important;
+    border: solid white;
+    float: left;
+    cursor: pointer;
 }
 
-.top-left,
-.top,
-.middle-left,
+.top-left {
+    border-width: 0px 5px 5px 0px;
+}
+
+
+.middle-left {
+    border-width: 5px 5px 5px 0px;
+}
+
+.top {
+    border-width: 0px 5px 5px 5px;
+}
+
 .middle {
-    border: 5px solid red;
-    /* border-style: red; */
+    border-width: 5px 5px 5px 5px;
 }
 
-.top-right,
-.middle-right {}
+.top-right {
+    border-width: 0px 0px 5px 5px;
+}
+
+.middle-right {
+    border-width: 5px 0px 5px 5px;
+}
+
+.bottom-left {
+    border-width: 5px 5px 0px 0px;
+}
+
+.bottom {
+    border-width: 5px 5px 0px 5px;
+}
+
+.bottom-right {
+    border-width: 5px 0px 0px 5px;
+}
