@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
 
+
 body {
     background-color: #121212;
     font-family: 'Inconsolata', monospace;
@@ -31,14 +32,17 @@ body {
 } */
 
 .square {
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 30px;
     outline: none !important;
     border: solid white;
     float: left;
     cursor: pointer;
+    text-align: center;
+    font-size: 80pt;
+    color: rgb(187, 134, 252);
 }
 
 .top-left {
@@ -76,4 +80,52 @@ body {
 
 .bottom-right {
     border-width: 5px 0px 0px 5px;
+}
+
+
+.bar {
+    text-align: center;
+}
+
+.player-txt,
+.winner-txt {
+    margin: 10px 0px;
+    font-size: 26pt;
+    display: inline-block;
+}
+
+.player-icon,
+.winner-icon {
+    font-size: 26pt;
+    display: inline-block;
+    color: white;
+}
+
+button {
+    margin-top: 20px;
+    height: 45px;
+    background-color: rgb(187, 134, 252);
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: 3px 3px 3px rgba(187, 134, 252, 0.4);
+    ;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+p {
+    margin: 5px 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(187, 134, 252);
+}
+
+a:hover {
+    text-decoration: underline;
 }

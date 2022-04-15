@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Tic-Tac-Toe Web Game</title>
 </head>
 
@@ -20,15 +23,9 @@
 
                 <!-- top line -->
                 <div class="line-top">
-                    <div class="square top-left">
-                        <div></div>
-                    </div>
-                    <div class="square top">
-                        <div></div>
-                    </div>
-                    <div class="square top-right">
-                        <div></div>
-                    </div>
+                    <div class="square top-left"></div>
+                    <div class="square top"></div>
+                    <div class="square top-right"></div>
                 </div>
 
                 <!-- mid line -->
@@ -60,14 +57,29 @@
         </section>
 
         <section class="bar">
-            <button>Reset</button>
+
+            <div class="player">
+                <div class="player-txt">Player: </div>
+                <div class="player-icon"><i id="player-icon" class="fa-light fa-x"></i></div>
+            </div>
+
+            <div class="winner">
+                <div class="winner-txt">Winner: </div>
+                <div class="winner-icon"><i id="winner-icon"></i></div>
+            </div>
+
+            <button type="button">RESET GAME</button>
         </section>
 
         <footer>
-            <p>Created by Chrystian Lopes <a href="https://github.com/chrystianmim" target="_blank">(@chrystianmim)</a>
-            </p>
+            <p>Created by Chrystian Lopes</p>
+            <p><a href="https://github.com/chrystianmim" target="_blank">GitHub</a> | <a
+                    href="https://www.linkedin.com/in/chrystianmim/" target="_blank">LinkedIn</a></p>
         </footer>
     </div>
+
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>
