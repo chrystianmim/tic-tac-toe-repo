@@ -14,10 +14,12 @@ function changeIcon(square) { // this fn changes square icon when the square get
             square.square.classList.remove('fa-regular', 'fa-circle');
             square.square.classList.add('fa-light', 'fa-x');
             square.value = turn;
+            playaudio();
         } else {
             square.square.classList.remove('fa-light', 'fa-x');
             square.square.classList.add('fa-regular', 'fa-circle');
             square.value = turn;
+            playaudio();
         }
     }
 }
@@ -72,11 +74,19 @@ function endGame() { // this fn will change the winner icon and kill squareClick
     }
 }
 
+function playaudio() {
+    audio.currentTime = 0;
+    audio.play();
+}
+
 // winner init value
 let winner = null;
 
 // game turn: 1 === player 'X', 2 === player 'O'
 let turn = 1;
+
+// audio played when click square
+let audio = new Audio("src/clicksound.wav");
 
 // capturing the squares into variables
 const topLeft = document.getElementsByClassName('top-left');
