@@ -3,9 +3,6 @@ function squareClick(square) { // the 'square' argument will get the square obje
     changePlayer(square);
     square.isClicked = true;
     checkWinner();
-    console.log('valor do winner no squareclick = ' + winner);
-    console.log('valor do turn = ' + turn);
-    console.log('valor do quadrado = ' + topLeftArr.value);
     if (winner !== null) {
         endGame();
     }
@@ -43,52 +40,27 @@ function changePlayer(square) { // this fn changes player icon when the square g
 }
 
 function checkWinner() {
-    if (topLeftArr.value === topMidArr.value && topMidArr.value === topRightArr.value) {
+    if (topLeftArr.value !== null && topLeftArr.value === topMidArr.value && topMidArr.value === topRightArr.value) {
         winner = topLeftArr.value;
-        /* return; */
-    }
-
-    if (middleLeftArr.value === middleArr.value && middleArr.value === middleRightArr.value) {
+    } else if (middleLeftArr.value === middleArr.value && middleArr.value === middleRightArr.value) {
         winner = middleLeftArr.value;
-        /* return; */
-    }
-
-    if (bottomLeftArr.value === bottomArr.value && bottomArr.value === bottomRightArr.value) {
+    } else if (bottomLeftArr.value === bottomArr.value && bottomArr.value === bottomRightArr.value) {
         winner = bottomLeftArr.value;
-        /* return; */
-    }
-
-    if (topLeftArr.value === middleLeftArr.value && middleLeftArr.value === bottomLeftArr.value) {
+    } else if (topLeftArr.value === middleLeftArr.value && middleLeftArr.value === bottomLeftArr.value) {
         winner = topLeftArr.value;
-        /* return; */
-    }
-
-    if (topMidArr.value === middleArr.value && middleArr.value === bottomArr.value) {
+    } else if (topMidArr.value === middleArr.value && middleArr.value === bottomArr.value) {
         winner = topMidArr.value;
-        /* return; */
-    }
-
-    if (topRightArr.value === middleRightArr.value && middleRightArr.value === bottomRightArr.value) {
+    } else if (topRightArr.value === middleRightArr.value && middleRightArr.value === bottomRightArr.value) {
         winner = topRightArr.value;
-        /* return; */
-    }
-
-    if (topLeftArr.value === middleArr.value && middleArr.value === bottomRightArr.value) {
+    } else if (topLeftArr.value === middleArr.value && middleArr.value === bottomRightArr.value) {
         winner = topLeftArr.value;
-        /* return; */
-    }
-
-    if (bottomLeftArr.value === middleArr.value && middleArr.value === topRightArr.value) {
+    } else if (bottomLeftArr.value === middleArr.value && middleArr.value === topRightArr.value) {
         winner = bottomLeftArr.value;
-        /* return; */
     }
-    console.log('valor do winner no checkwinner = ' + winner)
 }
 
-function endGame() {
+function endGame() { // this fn will change the winner icon and kill squareClick fn, so player will need to click reset button
     const winnerIcon = document.getElementById('winner-icon');
-
-    console.log('valor do winner no endgame = ' + winner)
 
     if (winner === 1) {
         winnerIcon.classList.add('fa-light', 'fa-x');
@@ -100,6 +72,7 @@ function endGame() {
     }
 }
 
+// winner init value
 let winner = null;
 
 // game turn: 1 === player 'X', 2 === player 'O'
